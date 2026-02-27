@@ -1,3 +1,3 @@
-# Nathan-Marin-Portfolio
+# Nathaniel Marin's Portfolio
 
-My portfolio
+
