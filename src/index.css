@@ -2,12 +2,17 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities'; */
 
+@import 'https://use.typekit.net/oov2wcw.css';
 @import 'tailwindcss';
 
 @layer base {
   body {
-    @apply bg-black
+    @apply bg-black text-white font-century-gothic relative
   }
+}
+
+@theme {
+  --font-century-gothic: century-gothic, sans-serif; 
 }
 /* :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
