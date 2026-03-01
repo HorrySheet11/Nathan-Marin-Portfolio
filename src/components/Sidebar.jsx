@@ -1,36 +1,51 @@
 import pfp from "../assets/author-image.jpg"
 import { useState, useEffect } from "react";
+import { IoIosPerson } from "react-icons/io";
+import { GrProjects } from "react-icons/gr";
+import { FaCode } from "react-icons/fa6";
+import { TiContacts } from "react-icons/ti";
+
+// function useWindowSize() {
+//   const [size, setSize] = useState([0, 0]);
+//   useLayoutEffect(() => {
+//     function updateSize() {
+//       setSize([window.innerWidth, window.innerHeight]);
+//     }
+//     window.addEventListener("resize", updateSize);
+//     updateSize();
+//     return () => window.removeEventListener("resize", updateSize);
+//   }, []);
+//   return size;
+// }
+
+function ButtonBar(props){
+  return (
+    <div className={`w-10 h-1.5 bg-white mt-1.5 mb-1.5 mr-0 ml-0 rounded-xs transition duration-400 ${props.className}`}></div>
+  )
+}
 
 function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);
   const nav = {
-    "About me": "#about-me",
-    Projects: "#projects",
-    Skills: "#skills",
-    Contact: "#contact",
+    "About me": ["#about-me", <IoIosPerson key="about-me" className="inline" />],
+    Projects: ["#projects", <GrProjects key="projects" className="inline" />],
+    Skills: ["#skills", <FaCode key="skills" className="inline" />],
+    Contact: ["#contact", <TiContacts key="contact" className="inline" />],
   }
-
-  useEffect(() => {
-    if (isOpen) {
-      document.body.classList.add("open")
-    } else {
-      document.body.classList.remove("open")
-    }
-  }, [isOpen])
 
   return (
     <div id="sidebar-wrapper" className={`rounded-r-3xl bg-linear-to-t from-blue-700 to-cyan-500 p-8 font-bold text-2xl h-screen w-max fixed left-0 transition ease-in-out duration-300 ${isOpen ? "translate-x-0" : "-translate-x-full"}`}>
-      <button type="button" className="inline-block cursor-pointer absolute top-1 -right-12" onClick={() => setIsOpen(!isOpen)}>
-        <div className={`w-10 h-1.5 bg-white mt-1.5 mb-1.5 mr-0 ml-0 rounded-xs transition duration-400 ${isOpen && "translate-x-0 translate-y-[12px] -rotate-45"}`}></div>
-        <div className={`w-10 h-1.5 bg-white mt-1.5 mb-1.5 mr-0 ml-0 rounded-xs transition duration-400 ${isOpen && "opacity-0"}`}></div>
-        <div className={`w-10 h-1.5 bg-white mt-1.5 mb-1.5 mr-0 ml-0 rounded-xs transition duration-400 ${isOpen && "translate-x-0 translate-y-[-12px] rotate-45"}`}></div>
+      <button type="button" className="inline-block cursor-pointer absolute top-1 -right-12 " onClick={() => setIsOpen(!isOpen)} >
+        <ButtonBar className={isOpen && "translate-x-0 translate-y-3 -rotate-45"}/>
+        <ButtonBar className={isOpen && "opacity-0"}/>
+        <ButtonBar className={isOpen && "translate-x-0 -translate-y-3 rotate-45"}/>
       </button>
       <nav className="h-full">
-        <ul className="sidebar-nav [&>*]:m-3 h-full flex flex-col items-center justify-center">
-          <img src={pfp} alt="Nathaniel Marin" class="rounded-full h-50 w-50" />
+        <ul className="sidebar-nav *:m-3 h-full flex flex-col items-start- justify-center">
+          <img src={pfp} alt="Nathaniel Marin" class="rounded-full h-40 w-40" />
           {Object.entries(nav).map(([key, value]) => (
             <li key={key} class="hover:scale-110 transition ease-in-out duration-200 cursor-pointer">
-              <a href={value}>{key}</a>
+              <a href={value}>{value[1]} {key} </a>
             </li>
           ))}
         </ul>
