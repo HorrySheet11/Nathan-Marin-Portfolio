@@ -19,9 +19,8 @@ function Sidebar() {
   }, [isOpen])
 
   return (
-    <div id="sidebar-wrapper" className='bg-linear-to-t from-blue-700 to-cyan-500 p-10 font-bold text-2xl h-screen w-max fixed left-0 transition ease-in-out duration-300'>
-      {/* <button type="button" className="absolute top-5 -right-5" onClick={() => setIsOpen(!isOpen)} aria-controls="sidebar-wrapper">toggle</button> */}
-      <button type="button" className="inline-block cursor-pointer " onClick={() => setIsOpen(!isOpen)}>
+    <div id="sidebar-wrapper" className={`rounded-r-3xl bg-linear-to-t from-blue-700 to-cyan-500 p-8 font-bold text-2xl h-screen w-max fixed left-0 transition ease-in-out duration-300 ${isOpen ? "translate-x-0" : "-translate-x-full"}`}>
+      <button type="button" className="inline-block cursor-pointer absolute top-1 -right-12" onClick={() => setIsOpen(!isOpen)}>
         <div className={`w-10 h-1.5 bg-white mt-1.5 mb-1.5 mr-0 ml-0 rounded-xs transition duration-400 ${isOpen && "translate-x-0 translate-y-[12px] -rotate-45"}`}></div>
         <div className={`w-10 h-1.5 bg-white mt-1.5 mb-1.5 mr-0 ml-0 rounded-xs transition duration-400 ${isOpen && "opacity-0"}`}></div>
         <div className={`w-10 h-1.5 bg-white mt-1.5 mb-1.5 mr-0 ml-0 rounded-xs transition duration-400 ${isOpen && "translate-x-0 translate-y-[-12px] rotate-45"}`}></div>
