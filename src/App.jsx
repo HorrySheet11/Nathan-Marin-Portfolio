@@ -6,7 +6,9 @@ function App() {
   return (
     <>
       <Sidebar />      
-      <AboutMe />      
+      <AboutMe />
+      <hr className="bg-linear-to-t from-blue-700 to-cyan-500 h-3 w-3/4 mx-auto rounded-md border-inherit"/>
+      
     </>
   )
 }
