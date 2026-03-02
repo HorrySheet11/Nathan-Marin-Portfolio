@@ -42,9 +42,9 @@ function Sidebar() {
       </button>
       <nav className="h-full">
         <ul className="sidebar-nav *:m-3 h-full flex flex-col items-start- justify-center">
-          <img src={pfp} alt="Nathaniel Marin" class="rounded-full h-40 w-40" />
+          <img src={pfp} alt="Nathaniel Marin" className="rounded-full h-40 w-40" />
           {Object.entries(nav).map(([key, value]) => (
-            <li key={key} class="hover:scale-110 transition ease-in-out duration-200 cursor-pointer">
+            <li key={key} className="hover:scale-110 transition ease-in-out duration-200 cursor-pointer">
               <a href={value[0]}>{value[1]} {key} </a>
             </li>
           ))}
