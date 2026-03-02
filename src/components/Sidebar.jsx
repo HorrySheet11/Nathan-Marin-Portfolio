@@ -45,7 +45,7 @@ function Sidebar() {
           <img src={pfp} alt="Nathaniel Marin" class="rounded-full h-40 w-40" />
           {Object.entries(nav).map(([key, value]) => (
             <li key={key} class="hover:scale-110 transition ease-in-out duration-200 cursor-pointer">
-              <a href={value}>{value[1]} {key} </a>
+              <a href={value[0]}>{value[1]} {key} </a>
             </li>
           ))}
         </ul>
