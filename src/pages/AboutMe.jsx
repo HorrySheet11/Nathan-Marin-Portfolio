@@ -4,12 +4,12 @@ function AboutMe() {
 	return (
 		<section
 			id="about-me"
-			className="p-52 section w-full h-screen grid place-items-center grid-cols-2 gap-10"
+			className="animate-appear p-52 section w-full h-screen grid place-items-center grid-cols-2 gap-10"
 		>
-			<img src={pfp} alt="about-me-pic" className="rounded-full" />
+			<img src={pfp} alt="about-me-pic" className="rounded-full w-100" />
 			<div className="*:mb-5">
 				<h1 className="font-bold">Nathaniel Marin</h1>
-				<h5 className="font-bold">Aspiring Web Developer</h5>
+				<h5 className="">Aspiring Web Developer</h5>
 				<p className="indent-3">
 					I am a person who is willing to be enlightened and willing to learn
 					more as a successful programmer. I currently finished my course in
