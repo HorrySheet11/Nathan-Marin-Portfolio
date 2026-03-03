@@ -4,6 +4,7 @@
 
 @import 'https://use.typekit.net/oov2wcw.css';
 @import 'tailwindcss';
+@reference 'tailwindcss';
 
 @layer base {
   html{
@@ -32,9 +33,18 @@
   }
   .section{
     @apply animate-section-appear
-    animation-timeline: view(block 40% 0%);
   }
 }
+
+/* .section{
+    animation-timeline: view(block 40% 0%);
+  } */
+
+#el {
+  animation: KF linear;
+  animation-timeline: scroll();
+}
+
 
 @theme {
   @keyframes appear {
@@ -56,6 +66,15 @@
       transform: translateY(0) scale(1);
     }
   }
+
+  @keyframes KF {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(2);
+  }
+}
 
   --font-century-gothic: century-gothic, sans-serif; 
   --animate-appear: appear 1s ease-in-out;
