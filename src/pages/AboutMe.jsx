@@ -4,7 +4,7 @@ function AboutMe() {
 	return (
 		<section
 			id="about-me"
-			className="animate-appear p-52 section w-full h-screen grid place-items-center grid-cols-2 gap-10"
+			className=" p-52 section w-full h-screen grid place-items-center grid-cols-2 gap-10"
 		>
 			<img src={pfp} alt="about-me-pic" className="rounded-full w-100" />
 			<div className="*:mb-5">

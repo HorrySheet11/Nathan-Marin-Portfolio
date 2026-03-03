@@ -36,11 +36,12 @@
   }
 }
 
-/* .section{
-    animation-timeline: view(block 40% 0%);
-  } */
+section{
+  animation: section-appear ;
+  animation-timeline: view();
+}
 
-#el {
+#progress-bar {
   animation: KF linear;
   animation-timeline: scroll();
 }
@@ -59,7 +60,7 @@
   @keyframes section-appear {
     from{
       opacity: 0;
-      transform: translateY(50px) scale(0.8);
+      transform: translateY(100px) scale(0.9);
     }
     to{
       opacity: 1;

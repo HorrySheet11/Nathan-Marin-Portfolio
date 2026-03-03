@@ -34,7 +34,7 @@ function Sidebar() {
   }
 
   return (
-    <div id="sidebar-wrapper" className={`rounded-r-3xl bg-linear-to-t from-blue-700 to-cyan-500 p-8 font-bold text-2xl h-screen w-max fixed left-0 transition ease-in-out duration-300 ${isOpen ? "translate-x-0" : "-translate-x-full"}`}>
+    <div id="sidebar-wrapper" className={`z-50 rounded-r-3xl bg-linear-to-t from-blue-700 to-cyan-500 p-8 font-bold text-2xl h-screen w-max fixed left-0 transition ease-in-out duration-300 ${isOpen ? "translate-x-0" : "-translate-x-full"}`}>
       <button type="button" className="inline-block cursor-pointer absolute top-1 -right-12 " onClick={() => setIsOpen(!isOpen)} >
         <ButtonBar className={isOpen && "translate-x-0 translate-y-3 -rotate-45"}/>
         <ButtonBar className={isOpen && "opacity-0"}/>
