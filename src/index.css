@@ -32,7 +32,7 @@
     @apply text-lg;
   }
   .section{
-    @apply animate-section-appear
+    @apply animate-section-appear p-52 w-full 
   }
 }
 
