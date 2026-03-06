@@ -32,7 +32,10 @@
     @apply text-lg;
   }
   .section{
-    @apply animate-section-appear p-52 w-full 
+    @apply animate-section-appear animate-appear p-52 w-full 
+  }
+  #swiper-wrapper {
+    transition: transform 0.3s linear;
   }
 }
 
