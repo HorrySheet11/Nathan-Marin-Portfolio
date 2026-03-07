@@ -35,7 +35,7 @@ function Sidebar() {
 		],
 		Projects: ["#projects", <GrProjects key="projects" className="inline" />],
 		Skills: ["#skills", <FaCode key="skills" className="inline" />],
-		Contact: ["#contact", <TiContacts key="contact" className="inline" />],
+		Socials: ["#contact", <TiContacts key="contact" className="inline" />],
 	};
 
 	return (

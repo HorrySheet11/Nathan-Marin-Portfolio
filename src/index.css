@@ -49,7 +49,6 @@ section{
   animation-timeline: scroll();
 }
 
-
 @theme {
   @keyframes appear {
     0% {
