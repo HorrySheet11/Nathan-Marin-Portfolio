@@ -34,7 +34,6 @@ function Skills() {
 			<h1 className="font-bold">Skills</h1>
 
 			<Swiper
-				// width={"fit-content"}
 				slidesPerView={1}
         spaceBetween={10}
 				centeredSlides={true}
@@ -57,10 +56,6 @@ function Skills() {
             slidesPerView: 3,
             spaceBetween: 30,
           },
-					// 1024: {
-					// 	slidesPerView: 4,
-					// 	spaceBetween: 30,
-					// },
 					1280: {
             slidesPerView: 5,
             spaceBetween: 30,
