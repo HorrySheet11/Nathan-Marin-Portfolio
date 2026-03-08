@@ -1,29 +1,31 @@
-import P1 from "../assets/samplePic.png";
+import blogApi from "../assets/projectPics/BlogAPISs.png";
+import FileUploader from "../assets/projectPics/FileUploaderSs.png";
+import ClubMemberPostBoard from "../assets/projectPics/ClubMemberPostBoardSs.png";
 
 function Projects() {
 	const projects = {
-		"Project 1": {
-			link: "sampleLink1.com",
-			description: "lorem ipsum dolor sit amet",
-			image: P1,
-			alt: "lorem ipsum",
+		"Blog API": {
+			link: "https://blog-api-one-lake.vercel.app",
+			description: "An implementation of rest API in nodejs which also uses passport jwt strategy for authentication. Stores user info and posts in a postgres database in Neon.",
+			image: blogApi,
+			alt: "homepage screenshot of blog api",
 		},
-		"Project 2": {
-			link: "sampleLink2.com",
-			description: "lorem ipsum dolor sit amet",
-			image: P1,
-			alt: "lorem ipsum",
+		"File Uploader": {
+			link: "https://fileuploader-zqjn.onrender.com",
+			description: "An entirely backend app which uses ejs for templating and expressJS for backend and routing. Uses multer for file uploads and stores files in a Supabase bucket. Uses passport local strategy for authentication.",
+			image: FileUploader,
+			alt: "homepage screenshot of File Uploader",
 		},
-		"Project 3": {
-			link: "sampleLink3.com",
-			description: "lorem ipsum dolor sit amet",
-			image: P1,
-			alt: "lorem ipsum",
+		"Club Member Post Board": {
+			link: "https://clubmemberpostboard.onrender.com",
+			description: "An implementation of passport local strategy for authentication and role based authorization. Stores user info and posts in a postgres database in Neon. Uses ejs for templating and expressJS for backend and routing.",
+			image: ClubMemberPostBoard,
+			alt: "homepage screenshot of Club member post board",
 		},
 		"Project 4": {
 			link: "sampleLink4.com",
 			description: "lorem ipsum dolor sit amet",
-			image: P1,
+			image: blogApi,
 			alt: "lorem ipsum",
 		},
 	};
@@ -46,6 +48,8 @@ function Projects() {
 						<a
 							href={value.link}
 							className="group w-150 transition ease-in-out duration-300	"
+							target="_blank"
+							rel="noopener noreferrer"
 						>
 							<img
 								src={value.image}

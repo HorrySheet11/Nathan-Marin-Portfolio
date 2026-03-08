@@ -6,7 +6,7 @@ function Socials() {
 	const socials = {
 		Facebook: { icon: <FaFacebook size={50} className="block" />, link: "https://www.facebook.com/nathaniel.marin.4618" },
 		Github: { icon: <FaGithub size={50} className="block" />, link: "https://github.com/HorrySheet11" },
-		LinkedIn: { icon: <FaLinkedin size={50} className="block" />, link: "www.linkedin.com/in/nathaniel-marin" },
+		LinkedIn: { icon: <FaLinkedin size={50} className="block" />, link: "https://www.linkedin.com/in/nathaniel-marin" },
 		Gmail: { icon: <SiGmail size={50} className="block" />, link: "https://mail.google.com/mail/u/0/?fs=1&to=marinnathan11@gmail.com&tf=cm" },
 	};
 	return (
