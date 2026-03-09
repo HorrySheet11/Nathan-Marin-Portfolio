@@ -67,6 +67,7 @@ function Skills() {
 				{Object.entries(skills).map(([key, value]) => {
 					return (
 						<SwiperSlide
+						
 							key={key}
 							className="swiper-slide h-210 w-230 group relative hover:z-50 bg-gray-700 rounded-2xl p-5 *:m-2 flex flex-col items-center justify-center transition-all ease-in-out duration-300 hover:max-h-1/2 hover:scale-105 hover:bg-gray-800 hover:shadow-2xl hover:shadow-gray-500"
 						>
