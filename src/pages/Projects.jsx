@@ -38,7 +38,7 @@ function Projects() {
 			id="projects"
 			className="section h-auto flex flex-col items-center justify-center gap-30"
 		>
-			<h1 className="font-bold">Projects</h1>
+			<h1 className="font-bold">Projects I have made</h1>
 			<div className="flex flex-row items-center justify-center	h-full w-full flex-wrap">
 				{Object.entries(projects).map(([key, value]) => (
 					<div

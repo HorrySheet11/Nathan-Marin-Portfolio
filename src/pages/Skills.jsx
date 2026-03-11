@@ -31,7 +31,7 @@ function Skills() {
 			id="skills"
 			className="section h-auto flex flex-col items-center justify-center gap-30"
 		>
-			<h1 className="font-bold">Skills</h1>
+			<h1 className="font-bold">My Skills</h1>
 
 			<Swiper
 				slidesPerView={1}
@@ -56,7 +56,11 @@ function Skills() {
             slidesPerView: 3,
             spaceBetween: 30,
           },
-					1280: {
+					1360: {
+						slidesPerView: 4,
+						spaceBetween: 30,
+					},
+					1500: {
             slidesPerView: 5,
             spaceBetween: 30,
           },
@@ -67,14 +71,14 @@ function Skills() {
 				{Object.entries(skills).map(([key, value]) => {
 					return (
 						<SwiperSlide
-						
+							
 							key={key}
 							className="swiper-slide h-210 w-230 group relative hover:z-50 bg-gray-700 rounded-2xl p-5 *:m-2 flex flex-col items-center justify-center transition-all ease-in-out duration-300 hover:max-h-1/2 hover:scale-105 hover:bg-gray-800 hover:shadow-2xl hover:shadow-gray-500"
 						>
-							<div className="h-100% w-fit rounded-xl block">{value.icon}</div>
-							<h4 className="group-hover:shadow-2xl group-hover:shadow-gray-500 w-full absolute -left-2 -bottom-2 desc transition-all ease-in-out duration-300 opacity-0 h-auto group-hover:opacity-100 bg-gray-800 rounded-b-2xl p-2 text-center font-bold">
-								{key}
-							</h4>
+								<div className="h-100% w-fit rounded-xl block">{value.icon}</div>
+								<h4 className="group-hover:shadow-2xl group-hover:shadow-gray-500 w-full absolute -left-2 -bottom-2 desc transition-all ease-in-out duration-300 opacity-0 h-auto group-hover:opacity-100 bg-gray-800 rounded-b-2xl p-2 text-center font-bold">
+									{key}
+								</h4>
 						</SwiperSlide>
 					);
 				})}

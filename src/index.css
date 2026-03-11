@@ -4,7 +4,6 @@
 
 @import 'https://use.typekit.net/oov2wcw.css';
 @import 'tailwindcss';
-@reference 'tailwindcss';
 
 @layer base {
   html{
