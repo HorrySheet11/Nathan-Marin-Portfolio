@@ -1,5 +1,5 @@
-@import 'tailwindcss';
 @import 'https://use.typekit.net/oov2wcw.css';
+@import 'tailwindcss';
 
 @layer base {
   html{
