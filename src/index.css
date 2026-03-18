@@ -5,9 +5,6 @@
   html{
     scroll-behavior: smooth;
   }
-  body {
-    @apply bg-linear-to-br from-black to-gray-700 text-white font-century-gothic relative;
-  }
   h1 {
     @apply text-5xl;
   }

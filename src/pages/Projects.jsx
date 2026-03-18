@@ -1,6 +1,7 @@
 import blogApi from "../assets/projectPics/BlogAPISs.png";
 import FileUploader from "../assets/projectPics/FileUploaderSs.png";
 import ClubMemberPostBoard from "../assets/projectPics/ClubMemberPostBoardSs.png";
+import bibleApp from "../assets/projectPics/BibleAppSs.png";
 
 function Projects() {
 	const projects = {
@@ -23,10 +24,10 @@ function Projects() {
 			alt: "homepage screenshot of Club member post board",
 		},
 		"Project 4": {
-			link: "sampleLink4.com",
-			description: "lorem ipsum dolor sit amet",
-			image: blogApi,
-			alt: "lorem ipsum",
+			link: "https://bible-app-pi-seven.vercel.app",
+			description: "A simple front-end react bible app that uses a bible API for data like books, chapters and verses.",
+			image: bibleApp,
+			alt: "homepage screenshot of bible app",
 		},
 	};
 
