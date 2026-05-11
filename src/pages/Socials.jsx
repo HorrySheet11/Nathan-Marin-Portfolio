@@ -27,7 +27,7 @@ function Socials() {
 			id="socials"
 			className="section h-screen flex flex-col items-center gap-50"
 		>
-			<h1 className="font-bold">Socials</h1>
+			<h1 className="font-bold">My Socials</h1>
 			<div className="flex flex-row gap-10">
 				{Object.entries(socials).map(([name, { icon }]) => (
 					<div

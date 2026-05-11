@@ -29,6 +29,7 @@
   #swiper-wrapper {
     transition: transform 0.3s linear;
   }
+  :root { color-scheme: light; }
 }
 
 section{

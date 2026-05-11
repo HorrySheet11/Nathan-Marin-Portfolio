@@ -1,9 +1,9 @@
-import { FaCss3Alt, FaGitAlt, FaNode } from "react-icons/fa";
+import { FaCss3Alt, FaGitAlt, FaNode, FaPython } from "react-icons/fa";
 import { FaHtml5 } from "react-icons/fa6";
 import { GrMysql } from "react-icons/gr";
 import { IoLogoJavascript } from "react-icons/io5";
 import { RiTailwindCssFill } from "react-icons/ri";
-import { SiExpress, SiPassport, SiPostgresql, SiPrisma } from "react-icons/si";
+import { SiExpress, SiPassport, SiPostgresql, SiPrisma, SiFastapi  } from "react-icons/si";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -25,6 +25,8 @@ function Skills() {
 		Github: { icon: <FaGithub size={180} className="block" /> },
 		MySQL: { icon: <GrMysql size={180} className="block" /> },
 		PostgreSQL: { icon: <SiPostgresql size={180} className="block" /> },
+		Python: { icon: <FaPython size={180} className="block" /> },
+		FastAPI: { icon: <SiFastapi  size={180} className="block" /> },
 	};
 	return (
 		<section
