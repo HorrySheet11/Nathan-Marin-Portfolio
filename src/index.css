@@ -6,7 +6,7 @@
     scroll-behavior: smooth;
   }
   h1 {
-    @apply text-5xl;
+    @apply text-5xl xs:max-sm:text-base;
   }
   h2 {
     @apply text-4xl;
@@ -24,7 +24,10 @@
     @apply text-lg;
   }
   .section{
-    @apply animate-section-appear animate-appear p-52 w-full 
+    @apply animate-section-appear animate-appear p-52 w-full xs:max-sm:p-5 
+  }
+  #responsive-title{
+    @apply xs:max-sm:text-2xl
   }
   #swiper-wrapper {
     transition: transform 0.3s linear;
@@ -43,6 +46,7 @@ section{
 }
 
 @theme {
+
   @keyframes appear {
     0% {
       opacity: 0;
@@ -73,6 +77,17 @@ section{
 }
 
   --font-century-gothic: century-gothic, sans-serif; 
+
   --animate-appear: appear 1s ease-in-out;
   --animate-section-appear: appear 1s ease-in-out;
+
+  --breakpoint-xs: 14rem;
+  --breakpoint-sm: 22rem;
+  --breakpoint-md: 48rem;
+  --breakpoint-lg: 64rem;
+  --breakpoint-xl: 80rem;
+  --breakpoint-xxl: 96rem;
+
+
+
 }
