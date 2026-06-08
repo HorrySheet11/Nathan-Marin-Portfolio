@@ -6,7 +6,7 @@
     scroll-behavior: smooth;
   }
   h1 {
-    @apply text-5xl xs:max-sm:text-base;
+    @apply text-5xl xs:max-sm:text-base sm:max-md:text-xl ;
   }
   h2 {
     @apply text-4xl;
@@ -18,19 +18,31 @@
     @apply text-2xl;
   }
   h5 {
-    @apply text-xl;
+    @apply text-xl xs:max-sm:text-sm sm:max-md:text-lg;
   }
   h6 {
     @apply text-lg;
   }
+  p{
+    @apply  xs:max-sm:text-justify xs:max-sm:text-xs sm:max-md:text-sm
+  }
   .section{
-    @apply animate-section-appear animate-appear p-52 w-full xs:max-sm:p-5 
+    @apply animate-section-appear animate-appear p-52 w-full 
   }
   #responsive-title{
     @apply xs:max-sm:text-2xl
   }
   #swiper-wrapper {
     transition: transform 0.3s linear;
+  }
+  .small-section{
+    @apply xs:max-sm:p-8 
+  }
+  .small-div{
+    @apply  xs:max-sm:**:mb-2 xs:max-sm:self-start
+  }
+  .medium-section{
+    @apply xs:max-sm:p-10
   }
   :root { color-scheme: light; }
 }
@@ -83,7 +95,7 @@ section{
 
   --breakpoint-xs: 14rem;
   --breakpoint-sm: 22rem;
-  --breakpoint-md: 48rem;
+  --breakpoint-md: 29rem;
   --breakpoint-lg: 64rem;
   --breakpoint-xl: 80rem;
   --breakpoint-xxl: 96rem;
