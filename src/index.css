@@ -6,7 +6,7 @@
     scroll-behavior: smooth;
   }
   h1 {
-    @apply text-5xl xs:max-sm:text-base sm:max-md:text-xl md:max-lg:text-2xl;
+    @apply text-5xl xs:max-sm:text-base sm:max-md:text-xl md:max-lg:text-2xl lg:text-3xl;
   }
   h2 {
     @apply text-4xl;
@@ -18,13 +18,13 @@
     @apply text-2xl;
   }
   h5 {
-    @apply text-xl xs:max-sm:text-sm sm:max-md:text-lg md:max-lg:text-xl;
+    @apply text-xl xs:max-sm:text-sm sm:max-md:text-lg md:max-lg:text-xl lg:text-2xl;
   }
   h6 {
     @apply text-lg;
   }
   p{
-    @apply  xs:max-lg:text-justify xs:max-sm:text-xs sm:max-md:text-sm md:max-lg:text-base;
+    @apply  xs:max-lg:text-justify xs:max-sm:text-xs sm:max-md:text-sm md:max-lg:text-base lg:text-lg;
   }
   .section{
     @apply animate-section-appear animate-appear p-52 w-full 
@@ -97,6 +97,6 @@ section{
   --breakpoint-sm: 22rem;
   --breakpoint-md: 29rem;
   --breakpoint-lg: 39rem;
-  --breakpoint-xl: 86rem;
-  --breakpoint-xxl: 96rem;
+  --breakpoint-xl: 50rem;
+  --breakpoint-xxl: 80rem;
 }
