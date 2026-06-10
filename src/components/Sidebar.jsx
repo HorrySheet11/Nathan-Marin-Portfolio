@@ -18,10 +18,14 @@ import pfp from "../assets/author-image.jpg";
 //   return size;
 // }
 
-function ButtonBar(props) {
+function ButtonBar(className) {
 	return (
 		<div
-			className={`w-10 h-1.5 bg-white dark:bg-white mt-1.5 mb-1.5 mr-0 ml-0 rounded-xs transition duration-400 ${props.className}`}
+			className={`w-10 h-1.5 bg-white dark:bg-white mt-1.5 mb-1.5 mr-0 ml-0 rounded-xs transition duration-400 ${className}
+						xs:max-sm:w-7 xs:max-sm:h-1 xs:max-sm:mt-1 xs:max-sm:mr-3 xs:max-sm:ml-0 xs:max-sm:rounded-xs
+						sm:max-md:w-8 sm:max-md:h-1 sm:max-md:mt-1.2 sm:max-md:mr-2 sm:max-md:ml-0 sm:max-md:rounded-xs
+						md:max-lg:w-9 md:max-lg:h-1 md:max-lg:mt-1. md:max-lg:mr-1 md:max-lg:ml-0 md:max-lg:rounded-xs
+						`}
 		></div>
 	);
 }
@@ -29,10 +33,7 @@ function ButtonBar(props) {
 function Sidebar() {
 	const [isOpen, setIsOpen] = useState(false);
 	const nav = {
-		"About me": [
-			"#about-me",
-			<IoIosPerson key="about-me" className="inline" />,
-		],
+		"About me": ["#about-me", <IoIosPerson key="about-me" className="inline" />,],
 		Projects: ["#projects", <GrProjects key="projects" className="inline" />],
 		Skills: ["#skills", <FaCode key="skills" className="inline" />],
 		Socials: ["#socials", <TiContacts key="contact" className="inline" />],
@@ -49,7 +50,7 @@ function Sidebar() {
 				onClick={() => setIsOpen(!isOpen)}
 			>
 				<ButtonBar
-					className={isOpen && "translate-x-0 translate-y-3 -rotate-45"}
+					className={isOpen && "translate-x-0 translate-y-3 -rotate-45 xs:"}
 				/>
 				<ButtonBar className={isOpen && "opacity-0"} />
 				<ButtonBar
@@ -68,7 +69,7 @@ function Sidebar() {
 							key={key}
 							className="hover:scale-110 transition ease-in-out duration-200 cursor-pointer"
 						>
-							<a href={value[0]}>
+							<a href={value[0]} onClick={() => setIsOpen(false)}>
 								{value[1]} {key}
 							</a>
 						</li>
