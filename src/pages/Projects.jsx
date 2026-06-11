@@ -23,7 +23,7 @@ function Projects() {
 			image: ClubMemberPostBoard,
 			alt: "homepage screenshot of Club member post board",
 		},
-		"Project 4": {
+		"Bible App": {
 			link: "https://bible-app-pi-seven.vercel.app",
 			description: "A simple front-end react bible app that uses a bible API for data like books, chapters and verses.",
 			image: bibleApp,
@@ -31,33 +31,32 @@ function Projects() {
 		},
 	};
 
-	const hiddenHover =
-		"group-hover:shadow-2xl group-hover:shadow-gray-500 w-160 absolute -left-0 desc transition-all ease-in-out duration-300 opacity-0 h-0 group-hover:h-auto group-hover:opacity-100 group-hover:translate-y-5 bg-gray-800 rounded-b-2xl p-3";
 	return (
 		<section
 			key="projects"
 			id="projects"
-			className="section h-auto flex flex-col items-center justify-center gap-30"
+			className="section h-auto flex flex-col items-center justify-center gap-30 w-full"
 		>
 			<h1 className="font-bold">Projects I have made</h1>
 			<div className="flex flex-row items-center justify-center	h-full w-full flex-wrap">
 				{Object.entries(projects).map(([key, value]) => (
 					<div
 						key={key}
-						className="relative hover:z-50 max-w-fit bg-gray-700 rounded-2xl p-3 *:m-2 place-content-center flex flex-col m-5 transition-all ease-in-out duration-300 hover:max-h-1/2 hover:scale-105 hover:bg-gray-800 hover:shadow-2xl hover:shadow-gray-500 hover:rounded-b-none "
+						className="relative hover:z-50 h-auto w-auto bg-gray-700 rounded-2xl p-3 *:m-2 place-content-center flex flex-col m-5 transition-all ease-in-out duration-300 hover:max-h-1/2 hover:scale-105 hover:bg-gray-800 hover:shadow-2xl hover:shadow-gray-500 hover:rounded-b-none "
 					>
+						{/* FIXME: fix project divs size */}
 						<a
 							href={value.link}
-							className="group w-150 transition ease-in-out duration-300	"
+							className="group transition ease-in-out duration-300	"
 							target="_blank"
 							rel="noopener noreferrer"
 						>
 							<img
 								src={value.image}
 								alt={value.alt}
-								className="h-100% width-auto rounded-xl block"
+								className="h-auto w-[30vw] rounded-xl block xs:h-50"
 							/>
-							<div className={hiddenHover}>
+							<div className={"group-hover:shadow-2xl group-hover:shadow-gray-500 w-[30vw + 2rem] absolute left-0 desc transition-all ease-in-out duration-300 opacity-0 h-0 group-hover:h-auto group-hover:opacity-100 group-hover:translate-y-5 bg-gray-800 rounded-b-2xl p-3"}>
 								<h4>{key}</h4>
 								<p>{value.description}</p>
 							</div>

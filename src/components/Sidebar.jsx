@@ -43,7 +43,11 @@ function Sidebar() {
 		<div
 			id="sidebar-wrapper"
 			className={`z-50 rounded-r-3xl bg-linear-to-t from-blue-700 to-cyan-500 dark:bg-linear-to-t dark:from-blue-700 dark:to-cyan-500 p-20 font-bold text-2xl h-screen w-max fixed left-0 transition ease-in-out duration-300 ${isOpen ? "translate-x-0" : "-translate-x-full"}
-			xs:max-md:p-0 `}
+			xs:max-sm:p-0 
+			sm:max-md:p-2 
+			md:max-lg:p-4 
+			lg:max-xl:p-10
+			`}
 		>
 			<button
 				type="button"
@@ -60,7 +64,11 @@ function Sidebar() {
 			</button>
 			<nav className="h-full">
 				<ul className="sidebar-nav p-3 gap-6 h-full flex flex-col items-start- justify-center
-				xs:max-lg:gap-2">
+				xs:max-sm:gap-2
+				sm:max-md:gap-3
+				md:max-lg:gap-4
+				lg:max-xl:gap-5
+				">
 					<img
 						src={pfp}
 						alt="Nathaniel Marin"

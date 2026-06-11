@@ -6,10 +6,9 @@ function AboutMe() {
 			id="about-me"
 			className="section grid place-items-center grid-cols-2 gap-10 small-section 
 			xs:max-sm:gap-3 xs:max-lg:grid-cols-1 
-			sm:max-md:p-13 sm:max-md:gap-5 
-			md:max-lg:p-13 
-			lg:max-xl:p-15 lg:max-xl:gap-7 
-			xl:max-2xl:p-30 xl:max-2xl:gap-9"
+			sm:max-md:gap-5 
+			lg:max-xl:gap-7 
+			xl:max-2xl:gap-9"
 		>
 			<img
 				src={pfp}
