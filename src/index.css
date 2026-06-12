@@ -27,7 +27,7 @@
     @apply  xs:max-lg:text-justify xs:max-sm:text-xs sm:max-md:text-sm md:max-lg:text-base lg:text-lg;
   }
   .section{
-    @apply animate-section-appear animate-appear p-52 w-full xs:max-sm:p-10 sm:max-md:p-13 md:max-lg:p-13 lg:max-xl:p-15 xl:max-2xl:p-30  
+    @apply animate-section-appear p-52 w-full xs:max-sm:p-10 sm:max-md:p-13 md:max-lg:p-13 lg:max-xl:p-15 xl:max-2xl:p-30  
   }
   #swiper-wrapper {
     transition: transform 0.3s linear;
@@ -55,15 +55,6 @@ section{
 }
 
 @theme {
-
-  @keyframes appear {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
 
   @keyframes section-appear {
     from{

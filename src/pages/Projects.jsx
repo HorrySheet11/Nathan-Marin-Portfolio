@@ -57,12 +57,11 @@ function Projects() {
 					<div
 						key={key}
 						className="relative hover:z-50 h-auto w-auto bg-gray-700 rounded-2xl p-5 place-content-center flex flex-col  transition-all ease-in-out duration-300 hover:max-h-1/2 hover:scale-105 hover:bg-gray-800 hover:shadow-2xl hover:shadow-gray-500 hover:rounded-b-none 
-							xs:max-sm:p-2 xs:max-sm:m-2
+							xs:max-sm:p-2 xs:max-sm:m-0.5 xs:max-sm:rounded-lg
 							sm:max-md:p-3 sm:max-md:m-3
 							md:max-lg:p-4 md:max-lg:m-4
 							lg:max-xl:"
 					>
-						{/* FIXME: fix project divs size */}
 						<a
 							href={value.link}
 							className="group transition ease-in-out duration-300	"
@@ -72,7 +71,11 @@ function Projects() {
 							<img
 								src={value.image}
 								alt={value.alt}
-								className="h-auto max-w-full rounded-xl block xs:h-50"
+								className="h-auto w-150 rounded-xl block 
+									xs:max-sm:w-50	xs:max-md:rounded-lg
+									sm:max-md:w-70	
+									md:max-lg:w-100	
+									lg:max-xl:w-130"
 							/>
 							<div
 								className="group-hover:shadow-2xl group-hover:shadow-gray-500 w-[30vw + 2rem] absolute left-0 desc transition-all ease-in-out duration-300 opacity-0 h-0 group-hover:h-auto group-hover:opacity-100 group-hover:translate-y-5 bg-gray-800 rounded-b-2xl p-3
