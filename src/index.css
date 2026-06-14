@@ -35,7 +35,7 @@
   .small-section{
     @apply xs:max-sm:p-8 
   }
-  .small-div{
+  .small-div{ 
     @apply  xs:max-sm:**:mb-2 xs:max-sm:self-start
   }
   .medium-section{

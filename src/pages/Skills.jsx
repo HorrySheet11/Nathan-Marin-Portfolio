@@ -3,55 +3,66 @@ import { FaHtml5 } from "react-icons/fa6";
 import { GrMysql } from "react-icons/gr";
 import { IoLogoJavascript } from "react-icons/io5";
 import { RiTailwindCssFill } from "react-icons/ri";
-import { SiExpress, SiPassport, SiPostgresql, SiPrisma, SiFastapi  } from "react-icons/si";
+import {
+	SiExpress,
+	SiFastapi,
+	SiPassport,
+	SiPostgresql,
+	SiPrisma,
+} from "react-icons/si";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import { FaGithub, FaReact } from "react-icons/fa6";
-import { Autoplay} from "swiper/modules";
 import { useEffect, useState } from "react";
+import { FaGithub, FaReact } from "react-icons/fa6";
+import { Autoplay } from "swiper/modules";
 
-function Skills() {
-	const [screenSize, setScreenSize] = useState("");
-	
+function Skills({screenSize}) {
+	const [size, setSize] = useState(30);
 	useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth < 240) {
-        setScreenSize(30);
-      } else if (window.innerWidth >= 240 && window.innerWidth < 360) {
-        setScreenSize(50);
-      } else if (window.innerWidth >= 360 && window.innerWidth < 464) {
-        setScreenSize(90);
-      } else if (window.innerWidth >= 464 && window.innerWidth < 624) {
-        setScreenSize(130);
-      } else if (window.innerWidth >= 624 && window.innerWidth < 800) {
-        setScreenSize(150);
-      } else if (window.innerWidth >= 800) {
-        setScreenSize(180);
-      }
-    };
-
-    window.addEventListener("resize", handleResize);
-    handleResize();
-
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+		switch (screenSize) {
+			case "xs":
+				setSize(30);
+				break;
+			case "sm":
+				setSize(50);
+				break;
+			case "md":
+				setSize(80); 
+				break;
+			case "lg":
+				setSize(100);
+				break;
+			case "xl":
+				setSize(150);
+				break;
+			case "2xl":
+				setSize(180);
+				break;
+			default:
+				break;
+		}
+	}, [screenSize]);
 	const skills = {
-		HTML: { icon: <FaHtml5 size={screenSize} className="block" /> },
-		CSS: { icon: <FaCss3Alt size={screenSize} className="block" /> },
-		TailwindCss: { icon: <RiTailwindCssFill size={screenSize} className="block" /> },
-		JavaScript: { icon: <IoLogoJavascript size={screenSize} className="block" /> },
-		React: { icon: <FaReact size={screenSize} className="block" /> },
-		NodeJS: { icon: <FaNode size={screenSize} className="block" /> },
-		ExpressJS: { icon: <SiExpress size={screenSize} className="block" /> },
-		"Prisma ORM": { icon: <SiPrisma size={screenSize} className="block" /> },
-		"Passport.js": { icon: <SiPassport size={screenSize} className="block" /> },
-		Git: { icon: <FaGitAlt size={screenSize} className="block" /> },
-		Github: { icon: <FaGithub size={screenSize} className="block" /> },
-		MySQL: { icon: <GrMysql size={screenSize} className="block" /> },
-		PostgreSQL: { icon: <SiPostgresql size={screenSize} className="block" /> },
-		Python: { icon: <FaPython size={screenSize} className="block" /> },
-		FastAPI: { icon: <SiFastapi  size={screenSize} className="block" /> },
+		HTML: { icon: <FaHtml5 size={size} className="block" /> },
+		CSS: { icon: <FaCss3Alt size={size} className="block" /> },
+		TailwindCss: {
+			icon: <RiTailwindCssFill size={size} className="block" />,
+		},
+		JavaScript: {
+			icon: <IoLogoJavascript size={size} className="block" />,
+		},
+		React: { icon: <FaReact size={size} className="block" /> },
+		NodeJS: { icon: <FaNode size={size} className="block" /> },
+		ExpressJS: { icon: <SiExpress size={size} className="block" /> },
+		"Prisma ORM": { icon: <SiPrisma size={size} className="block" /> },
+		"Passport.js": { icon: <SiPassport size={size} className="block" /> },
+		Git: { icon: <FaGitAlt size={size} className="block" /> },
+		Github: { icon: <FaGithub size={size} className="block" /> },
+		MySQL: { icon: <GrMysql size={size} className="block" /> },
+		PostgreSQL: { icon: <SiPostgresql size={size} className="block" /> },
+		Python: { icon: <FaPython size={size} className="block" /> },
+		FastAPI: { icon: <SiFastapi size={size} className="block" /> },
 	};
 	return (
 		<section
@@ -76,19 +87,19 @@ function Skills() {
 				grabCursor={true}
 				modules={[Autoplay]}
 				breakpoints={{
-          200: {
-            spaceBetween: 10,
-          },
-          353: {
-            spaceBetween: 20,
-          },
+					200: {
+						spaceBetween: 10,
+					},
+					353: {
+						spaceBetween: 20,
+					},
 					464: {
 						spaceBetween: 30,
 					},
 					624: {
-            spaceBetween: 40,
-          },
-        }}
+						spaceBetween: 40,
+					},
+				}}
 				id="swiper-wrapper"
 				className="h-auto w-full"
 			>
@@ -103,10 +114,10 @@ function Skills() {
 								md:max-lg:p-4
 								lg:p-5"
 						>
-								<div className="h-100% w-t rounded-xl block">{value.icon}</div>
-								<h4 className="group-hover:shadow-2xl group-hover:shadow-gray-500 w-full absolute -left-2 -bottom-2 desc transition-all ease-in-out duration-300 opacity-0 h-auto group-hover:opacity-100 bg-gray-800 rounded-b-2xl p-2 text-center font-bold">
-									{key}
-								</h4>
+							<div className="h-100% w-t rounded-xl block">{value.icon}</div>
+							<h4 className="group-hover:shadow-2xl group-hover:shadow-gray-500 w-full absolute -left-2 -bottom-2 desc transition-all ease-in-out duration-300 opacity-0 h-auto group-hover:opacity-100 bg-gray-800 rounded-b-2xl p-2 text-center font-bold">
+								{key}
+							</h4>
 						</SwiperSlide>
 					);
 				})}

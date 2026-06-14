@@ -5,19 +5,45 @@ import AboutMe from "./pages/AboutMe";
 import Projects from "./pages/Projects.jsx";
 import Skills from "./pages/Skills.jsx";
 import Socials from "./pages/Socials.jsx";
+import { useContext, useEffect, useState } from "react";
 
 function App() {
+	// const size = useContext(SizeContext);
+	const [screenSize, setScreenSize] = useState("");
+		
+		useEffect(() => {
+			const handleResize = () => {
+				if (window.innerWidth < 240) {
+					setScreenSize("xs");
+				} else if (window.innerWidth >= 240 && window.innerWidth < 360) {
+					setScreenSize("sm");
+				} else if (window.innerWidth >= 360 && window.innerWidth < 464) {
+					setScreenSize("md");
+				} else if (window.innerWidth >= 464 && window.innerWidth < 624) {
+					setScreenSize("lg");
+				} else if (window.innerWidth >= 624 && window.innerWidth < 800) {
+					setScreenSize("xl");
+				} else if (window.innerWidth >= 800) {
+					setScreenSize("2xl");
+				}
+			};
+	
+			window.addEventListener("resize", handleResize);
+			handleResize();
+	
+			return () => window.removeEventListener("resize", handleResize);
+		}, []);
 	return (
 		<div className="relative">
-			<ProgressBar />
-			<Sidebar />
-			<AboutMe />
-			<Bar />
-			<Projects />
-			<Bar />
-			<Skills />
-			<Bar />
-			<Socials />
+				<ProgressBar />
+				<Sidebar />
+				<AboutMe />
+				<Bar />
+				<Projects />
+				<Bar />
+				<Skills screenSize={screenSize} />
+				<Bar />
+				<Socials screenSize={screenSize}  />
 		</div>
 	);
 }
