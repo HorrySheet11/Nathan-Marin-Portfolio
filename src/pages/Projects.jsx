@@ -45,9 +45,9 @@ function Projects() {
 			md:max-lg:gap-30
 			lg:max-xl:"
 		>
-			<h1 className="font-bold">Projects I have made</h1>
+			<h1 className="font-bold text-center">Projects I have made</h1>
 			<div
-				className="flex flex-row items-center justify-center	h-full w-full flex-wrap gap-10
+				className="flex flex-row items-center justify-center h-full w-full flex-wrap gap-10
 					xs:max-sm:gap-2
 					sm:max-md:gap-4
 					md:max-lg:gap-6
