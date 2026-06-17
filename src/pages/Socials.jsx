@@ -51,13 +51,13 @@ function Socials({screenSize}) {
 	return (
 		<section
 			id="socials"
-			className="section h-screen flex flex-col items-center gap-50
-			xs:max-sm:gap-10 
-			sm:max-md:gap-20 
-			lg:max-xl:gap-30"
+			className="section flex flex-col items-center 
+			xs:max-sm:gap-10 xs:max-sm:mb-10
+			sm:max-md:gap-20 sm:max-md:mb-20 
+			lg:gap-30 lg:mb-30"
 		>
 			<h1 className="font-bold">My Socials</h1>
-			<div className="flex flex-row justify-evenly gap-10 mx-auto w-full">
+			<div className="flex flex-row justify-evenly mx-auto w-full">
 				{Object.entries(socials).map(([name, { icon }]) => (
 					<div
 						key={name}
