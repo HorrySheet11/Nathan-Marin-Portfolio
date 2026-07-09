@@ -2,6 +2,7 @@ import bibleApp from "../assets/projectPics/BibleAppSs.png";
 import blogApi from "../assets/projectPics/BlogAPISs.png";
 import ClubMemberPostBoard from "../assets/projectPics/ClubMemberPostBoardSs.png";
 import FileUploader from "../assets/projectPics/FileUploaderSs.png";
+import ShoppingCart from "../assets/projectPics/ShoppingCartSs.png";
 
 function Projects() {
 	const projects = {
@@ -32,6 +33,13 @@ function Projects() {
 				"A simple front-end react bible app that uses a bible API for data like books, chapters and verses.",
 			image: bibleApp,
 			alt: "homepage screenshot of bible app",
+		},
+		"Shopping Cart App": {
+			link: "https://shopping-cart-rho-seven.vercel.app",
+			description:
+				"A front-end react shopping cart app that uses a fake store API for data. Also has a cart to track selected items and total price.",
+			image: ShoppingCart,
+			alt: "homepage screenshot of shopping cart app",
 		},
 	};
 
