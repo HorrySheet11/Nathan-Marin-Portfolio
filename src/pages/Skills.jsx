@@ -17,7 +17,7 @@ import { useEffect, useState } from "react";
 import { FaGithub, FaReact } from "react-icons/fa6";
 import { Autoplay } from "swiper/modules";
 import { BiLogoMongodb } from "react-icons/bi";
-import { SiDrizzle } from "react-icons/si";
+import { SiDrizzle, SiMongoose  } from "react-icons/si";
 
 function Skills({screenSize}) {
 	const [size, setSize] = useState(30);
@@ -65,6 +65,7 @@ function Skills({screenSize}) {
 		MySQL: { icon: <GrMysql size={size} className="block" /> },
 		PostgreSQL: { icon: <SiPostgresql size={size} className="block" /> },
 		MongoDB: { icon: <BiLogoMongodb size={size} className="block" /> },
+		Mongoose: { icon: <SiMongoose  size={size} className="block" /> },
 		Python: { icon: <FaPython size={size} className="block" /> },
 		FastAPI: { icon: <SiFastapi size={size} className="block" /> },
 	};
