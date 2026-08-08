@@ -37,7 +37,7 @@ function Projects() {
 		"Shopping Cart App": {
 			link: "https://shopping-cart-rho-seven.vercel.app",
 			description:
-				"A front-end react shopping cart app that uses a fake store API for data. Also has a cart to track selected items and total price.",
+				"A front-end shopping cart app that uses a fake store API for sample data. Also has a cart to track selected items and total price.",
 			image: ShoppingCart,
 			alt: "homepage screenshot of shopping cart app",
 		},

@@ -16,6 +16,8 @@ import "swiper/css/pagination";
 import { useEffect, useState } from "react";
 import { FaGithub, FaReact } from "react-icons/fa6";
 import { Autoplay } from "swiper/modules";
+import { BiLogoMongodb } from "react-icons/bi";
+import { SiDrizzle } from "react-icons/si";
 
 function Skills({screenSize}) {
 	const [size, setSize] = useState(30);
@@ -55,12 +57,14 @@ function Skills({screenSize}) {
 		React: { icon: <FaReact size={size} className="block" /> },
 		NodeJS: { icon: <FaNode size={size} className="block" /> },
 		ExpressJS: { icon: <SiExpress size={size} className="block" /> },
-		"Prisma ORM": { icon: <SiPrisma size={size} className="block" /> },
 		"Passport.js": { icon: <SiPassport size={size} className="block" /> },
+		"Prisma ORM": { icon: <SiPrisma size={size} className="block" /> },
+		"Drizzle ORM": { icon: <SiDrizzle size={size} className="block" /> },
 		Git: { icon: <FaGitAlt size={size} className="block" /> },
 		Github: { icon: <FaGithub size={size} className="block" /> },
 		MySQL: { icon: <GrMysql size={size} className="block" /> },
 		PostgreSQL: { icon: <SiPostgresql size={size} className="block" /> },
+		MongoDB: { icon: <BiLogoMongodb size={size} className="block" /> },
 		Python: { icon: <FaPython size={size} className="block" /> },
 		FastAPI: { icon: <SiFastapi size={size} className="block" /> },
 	};
