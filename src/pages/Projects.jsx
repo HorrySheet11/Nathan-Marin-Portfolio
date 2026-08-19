@@ -3,6 +3,7 @@ import blogApi from "../assets/projectPics/BlogAPISs.png";
 import ClubMemberPostBoard from "../assets/projectPics/ClubMemberPostBoardSs.png";
 import FileUploader from "../assets/projectPics/FileUploaderSs.png";
 import ShoppingCart from "../assets/projectPics/ShoppingCartSs.png";
+import RealTimeChatApp from "../assets/projectPics/RealTimeChatAppSs.png";
 
 function Projects() {
 	const projects = {
@@ -40,6 +41,13 @@ function Projects() {
 				"A front-end shopping cart app that uses a fake store API for sample data. Also has a cart to track selected items and total price.",
 			image: ShoppingCart,
 			alt: "homepage screenshot of shopping cart app",
+		},
+		"Real-time Chat App": {
+			link: "https://real-time-chat-app-e6iq-liard.vercel.app/",
+			description:
+				"A full-stack real-time chat app that uses socket.io for real-time communication between users hosted in Vercel and Render. Backend was made in NodeJS and uses mongodb for data storage and mongoose for schema and models.",
+			image: RealTimeChatApp,
+			alt: "chat page screenshot of chat app",
 		},
 	};
 
